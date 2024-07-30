@@ -23,13 +23,17 @@ public class Listexam {
 			
 			int randomNumber = random.nextInt(45) + 1;
 			
-			// FIXME 중복검사 해보자!! --> 중복됐으면 넣어주지 않는다. --> 중복 안 되었으면 숫자를 넣는다.
+			// 중복검사 해보자!! --> 중복됐으면 넣어주지 않는다. --> 중복 안 되었으면 숫자를 넣는다.
 			if(!lottoList.contains(randomNumber)) {
 				lottoList.add(randomNumber);				
+			}else {
+				System.out.println("중복된 숫자입니다");
+				System.out.println("List: " + lottoList);
+				System.out.println("RandomNumber: " + randomNumber);
 			}
 		}
 		
-		// 리스트의 항목을 모두 출력해보자
+		// 리스트의 항목을 모두 출력해보자! -- for each 사용
 		System.out.println("로또 당첨 결과");
 		for (int element : lottoList) {
 			System.out.println("당첨번호: " + element);
